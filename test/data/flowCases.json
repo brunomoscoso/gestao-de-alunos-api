@@ -1,0 +1,42 @@
+{
+  "loginCases": [
+    {
+      "name": "admin login com credenciais válidas",
+      "payload": {
+        "email": "admin@escola.com",
+        "senha": "admin123"
+      },
+      "expectedStatus": 200,
+      "expectedRole": "admin"
+    },
+    {
+      "name": "admin login com senha inválida",
+      "payload": {
+        "email": "admin@escola.com",
+        "senha": "senha-incorreta"
+      },
+      "expectedStatus": 401,
+      "expectedError": "E-mail ou senha inválidos."
+    },
+    {
+      "name": "aluno login com credenciais válidas",
+      "payload": {
+        "email": "ana.souza@example.com",
+        "senha": "123456"
+      },
+      "expectedStatus": 200,
+      "expectedRole": "aluno"
+    }
+  ],
+  "novoAluno": {
+    "nome": "João Pereira",
+    "email": "joao.pereira@example.com",
+    "matricula": "2024010",
+    "senha": "senha123"
+  },
+  "novaEntrega": {
+    "disciplinaId": "disciplina-programacao-web",
+    "titulo": "Relatório de Sprint",
+    "descricao": "Entrega do relatório de sprint do módulo de desenvolvimento web."
+  }
+}
